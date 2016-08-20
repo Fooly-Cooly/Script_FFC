@@ -1,0 +1,80 @@
+new GuiControl(FFC_DownloadGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "1";
+   clipToParent = "1";
+
+   new GuiWindowCtrl(FFC_DownloadWindow) {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "406 118";
+      minExtent = "8 2";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "406 118";
+      closeCommand = "canvas.popDialog(FFC_DownloadGui);";
+
+      new GuiProgressCtrl(FFC_DownloadProgress) {
+         profile = "GuiProgressProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "22 70";
+         extent = "363 36";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+      };
+      new GuiTextCtrl(FFC_DownloadPText) {
+         profile = "LoadingBarTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "23 77";
+         extent = "362 18";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(FFC_DownloadTextB) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 49";
+         extent = "8 18";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(FFC_DownloadTextT) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 30";
+         extent = "8 18";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         maxLength = "255";
+      };
+   };
+};

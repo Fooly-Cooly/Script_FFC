@@ -1,0 +1,167 @@
+new GuiControl(FFCMinigameGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(Window_FFC) {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "197 174";
+      extent = "245 155";
+      minExtent = "8 2";
+      visible = "1";
+      text = "FFC MiniGame Settings";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popdialog(FFCMinigameGui);";
+
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "122 80";
+         extent = "120 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$Minigame::Skeleton";
+         text = "Enable Skeleme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 80";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Resize";
+         text = "Enable Resizeme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 60";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Horse";
+         text = "Enable Horseme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 40";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Smurf";
+         text = "Enable Smurfme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "122 60";
+         extent = "120 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::FloatingHead";
+         text = "Enable FloatingHead";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 100";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Cloak";
+         text = "Enable Cloakme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "122 40";
+         extent = "120 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Monkey";
+         text = "Enable Monkeyme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "122 100";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::PlayDead";
+         text = "Enable PlayDead";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 120";
+         extent = "106 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$MiniGame::Dog";
+         text = "Enable Dogme";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+   };
+};
+
+new GuiBitmapButtonCtrl(btnFFC)
+{
+	profile = "BlockButtonProfile";
+	horizSizing = "right";
+	vertSizing = "bottom";
+	position = "369 317";
+	extent = "90 18";
+	minExtent = "8 2";
+	visible = "1";
+	command = "canvas.pushdialog(FFCMinigameGui);";
+	text = "FFC Options";
+	groupNum = "-1";
+	buttonType = "PushButton";
+	bitmap = "base/client/ui/button1";
+	mKeepCached = "0";
+	mColor = "192 192 255 255";
+	helpTag = "0";
+};
+CMG_Window.add(btnFFC);
